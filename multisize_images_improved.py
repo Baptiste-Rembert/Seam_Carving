@@ -159,7 +159,12 @@ def instant_resize_2d(img, V_map, H_map, target_w, target_h):
     return new_img
 
 if __name__ == '__main__':
-    img_path = 'images-20100824/Woman.png'
+    import argparse
+    parser = argparse.ArgumentParser(description="Redimensionnement interactif 2D (Hongrois)")
+    parser.add_argument("image", help="Chemin vers l'image")
+    args = parser.parse_args()
+    
+    img_path = args.image
     img = cv.imread(img_path)
     # Réduction forte de l'image de base car l'algorithme hongrois sur des matrices N*N est très lourd
     #img = cv.resize(img, (300, int(300 * img.shape[0] / img.shape[1])))

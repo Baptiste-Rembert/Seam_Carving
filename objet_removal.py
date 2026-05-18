@@ -110,4 +110,8 @@ def restore_size(img, target_h, target_w):
     return out
 
 if __name__ == "__main__":
-    interactive_object_removal('images-20100824/family.png')
+    import argparse
+    parser = argparse.ArgumentParser(description="Suppression d'objets interactive")
+    parser.add_argument("image", help="Chemin vers l'image")
+    args = parser.parse_args()
+    interactive_object_removal(args.image)

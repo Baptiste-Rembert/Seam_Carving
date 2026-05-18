@@ -145,7 +145,12 @@ def multisize_resize(I_max, V_max, original_width, target_width, target_height):
     return final_img
 
 if __name__ == '__main__':
-    img_path = 'images-20100824/Woman.png'
+    import argparse
+    parser = argparse.ArgumentParser(description="Redimensionnement interactif 1D")
+    parser.add_argument("image", help="Chemin vers l'image")
+    args = parser.parse_args()
+    
+    img_path = args.image
     img = cv.imread(img_path)
     if img is None:
         print(f"Erreur : Impossible de lire l'image {img_path}")
