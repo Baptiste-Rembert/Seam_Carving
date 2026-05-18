@@ -39,7 +39,7 @@ def interactive_object_removal(image_path):
     remove_mask = np.zeros((rows, cols), dtype=np.uint8)
     protect_mask = np.zeros((rows, cols), dtype=np.uint8)
 
-    window_name = 'Interface: r=Suppr(Vert), k=Proteger(Rouge), ESPACE=Lancer'
+    window_name = 'Interface: r=Suppr(Vert), p=Proteger(Rouge), ESPACE=Lancer'
     cv.namedWindow(window_name)
     cv.setMouseCallback(window_name, draw_mask)
 

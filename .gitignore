@@ -1,3 +1,9 @@
 images-20100824/
 .venv/
 __pycache__/
+exemples_tests.txt
+demo_resultats/
+demo_batch_compare/
+demo_results_improved/
+rapport_eval/
+results/
