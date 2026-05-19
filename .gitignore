@@ -7,3 +7,6 @@ demo_batch_compare/
 demo_results_improved/
 rapport_eval/
 results/
+*.jpg
+*.png
+*.pdf
