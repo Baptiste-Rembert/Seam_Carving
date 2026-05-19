@@ -50,4 +50,16 @@ Utilise une approche matricielle poussée (algorithme hongrois) pour adapter la 
 python multisize_images_improved.py chemin/vers/mon_image.jpg
 ```
 
+### 4. Agrandissement d'Image (Image Enlarging)
+Permet d'agrandir une image au-delà de sa taille d'origine en dupliquant intelligemment les coutures (seams) d'énergie minimale. Opère par fractions successives pour éviter les effets d'étirement.
+```bash
+python image_enlarging.py chemin/vers/mon_image.jpg resultat.jpg --dw 200 --dh 100
+```
+
+### 5. Amplification de Contenu (Content Amplification)
+Amplifie les traits majeurs du contenu (effet loupe) tout en conservant exactement les dimensions de base de l'image. Implémente un agrandissement géométrique classique suivi d'une réduction par Seam Carving.
+```bash
+python content_amplification.py chemin/vers/mon_image.jpg resultat.jpg --scale 1.2
+```
+
 *(Note : D'autres scripts d'analyse de performances ou d'évaluation tels que `eval_metrics.py`, `compare_energy_improved.py` et `batch_evaluate.py` sont également lançables en ligne de commande. Vous pouvez utiliser l'argument `-h` pour voir leurs paramètres, par exemple `python compare_energy_improved.py -h`).*
